@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>종료된 이벤트</title>
+    <style>
+        /* *::-webkit-scrollbar {
+      display: none;
+    } */
+
+        #logo {
+            height: 20px;
+        }
+
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 50%;
+        }
+
+        .carousel-indicators li {
+            background-color: black;
+        }
+
+        #leftCarousel .col:nth-of-type(1) {
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .f1 {
+            text-align: left;
+
+            font-size: 13px;
+        }
+
+        .f-m {
+            display: flex;
+            text-align: left;
+            padding: 0;
+            font-size: 10px;
+        }
+
+        .f-m li:hover a {
+            color: goldenrod;
+            text-decoration: none;
+        }
+
+        .l {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .ff {
+            display: flex;
+        }
+
+        .f2 {
+            position: relative;
+            text-align: right;
+            font-size: 13px;
+        }
+
+        .fs {
+            width: 100px;
+            border: none;
+            background-color: #f8f9fa !important;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .fm2 {
+            display: flex;
+            position: absolute;
+            right: 10px;
+            top: 140px;
+        }
+
+        .fm2 button {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+
+            background-color: #fff;
+            border: none;
+            margin-left: 10px;
+        }
+
+        .fm2 button:hover {
+            border: 2px solid goldenrod;
+        }
+
+        .fm2 .sns1 {
+            position: relative;
+        }
+
+        .fm2 .sns1 img {
+            width: 30px;
+            height: 30px;
+
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .fm2 .sns2 {
+            position: relative;
+        }
+
+        .fm2 .sns2 img {
+            width: 30px;
+            height: 30px;
+
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .fm2 .sns3 {
+            position: relative;
+        }
+
+        .fm2 .sns3 img {
+            width: 30px;
+            height: 30px;
+
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .fm2 .sns4 {
+            position: relative;
+        }
+
+        .fm2 .sns4 img {
+            width: 20px;
+            height: 20px;
+
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+        }
+
+        .modal-content {
+            width: 350px;
+            transform: translate(100px, 50px);
+        }
+
+        .tac {
+            text-align: center;
+        }
+
+        .h-600 {
+            width: 100%;
+            height: 700px;
+        }
+
+        .mt-3 {
+            margin-top: 300px;
+        }
+
+
+        @media (max-width: 768px) {
+            .footer {
+                margin-top: 100px;
+            }
+
+            .f-m {
+                display: block;
+            }
+
+            .l {
+                display: none;
+            }
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        .ct-h1 {
+            font-weight: bold;
+        }
+
+        .ct-h1,
+        .ct-h4 {
+            width: 100%;
+        }
+
+        .col-6 img {
+            width: 500p-boxx;
+            height: 250px;
+
+            border-radius: 20px;
+        }
+
+        .mt-2 {
+            margin: 20px 0;
+        }
+
+        .ct-box img {
+            width: 100%;
+            height: 100%;
+            filter: grayscale(100%);
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: .3s;
+            transition: .3s
+        }
+
+        .ct-box:hover img {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        .ct-box:hover {
+            color: rgb(231, 188, 113);
+        }
+
+        .img-box {
+            border-radius: 20px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body class="px-0">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <!-- 네브 바 -->
+            <div class="col-12 px-0">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="./index.html"><img src="img1/logo.png" alt="logo" id="logo"
+                            class="ml-5"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">
+                                    상품
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="./event_product.html">행사 상품</a>
+                                    <a class="dropdown-item" href="./fresh_food.html">Fresh Food</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">
+                                    이벤트
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="./ongoing_event.html">진행중인 이벤트</a>
+                                    <a class="dropdown-item" href="./event_ended.html">종료된 이벤트</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <button type="button" class="btn btn-warning" data-toggle="modal"
+                                data-target="#exampleModal">
+                                로그인
+                            </button>
+                        </form>
+                    </div><!-- navbar-collapse -->
+            </div>
+            </nav>
+        </div><!-- row -->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel">로그인</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5>아이디</h5>
+                        <input type="text">
+                        <br>
+                        <br>
+                        <h5>비밀번호</h5>
+                        <input type="password">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                        <button type="button" class="btn btn-warning">확인</button>
+                    </div>
+                </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+        </div><!-- modal -->
+    </div><!-- container-fluid -->
+    <div class="container">
+        <div class="row">
+            <h1 class="mt-5 ct-h1">종료된 이벤트</h1>
+            <h4 class="mb-5 ct-h4">종료된 이벤트 입니다. 당첨자 발표는 이마트24 앱에서 확인해 주세요.</h4>
+            <div class="col-12 col-md-6 mt-2 ct-box">
+                <div class="img-box">
+                    <img src="img1/bsp1.jpg">
+                </div>
+                <h5>2023.11.15 ~ 2023.11.17</h5>
+                <h5>11월 쓱데이 7찬 도시락 이벤트</h5>
+            </div><!-- col-6 -->
+            <div class="col-12 col-md-6 mt-2 ct-box">
+                <div class="img-box">
+                    <img src="img1/bsp2.jpg">
+                </div>
+                <h5>2023.11.01 ~ 2023.11.11</h5>
+                <h5>11월 티머니페이 빼빼로 이벤트</h5>
+            </div><!-- col-6 -->
+            <div class="col-12 col-md-6 mt-2 ct-box">
+                <div class="img-box">
+                    <img src="img1/bsp3.jpg">
+                </div>
+                <h5>2023.11.01 ~ 2023.11.11</h5>
+                <h5>11월 춘식이 빼빼로 이벤트</h5>
+            </div><!-- col-6 -->
+            <div class="col-12 col-md-6 mt-2 ct-box">
+                <div class="img-box">
+                    <img src="img1/bsp4.jpg">
+                </div>
+                <h5>2023.11.01 ~ 2023.11.11</h5>
+                <h5>11월 롯데제과 빼빼로대전 이벤트</h5>
+            </div><!-- col-6 -->
+            <div class="col-12 col-md-6 mt-2 ct-box">
+                <div class="img-box">
+                    <img src="img1/bsp5.jpg">
+                </div>
+                <h5>2023.11.01 ~ 2023.11.12</h5>
+                <h5>11월 빼빼로데이 틀린그림찾기</h5>
+            </div><!-- col-6 -->
+            <div class="col-12 col-md-6 mt-2 ct-box">
+                <div class="img-box">
+                    <img src="img1/bsp6.jpg">
+                </div>
+                <h5>2023.10.18 ~ 2023.10.31</h5>
+                <h5>10월 롯데웰푸드 쿠폰 이벤트</h5>
+            </div><!-- col-6 -->
+            <div class="col-12 col-md-6 mt-2 ct-box">
+                <div class="img-box">
+                    <img src="img1/bsp7.jpg">
+                </div>
+                <h5>2023.10.16 ~ 2023.10.31</h5>
+                <h5>10월 돈사골새우라면 가입이벤트</h5>
+            </div><!-- col-6 -->
+            <div class="col-12 col-md-6 mt-2 ct-box">
+                <div class="img-box">
+                    <img src="img1/bsp8.jpg">
+                </div>
+                <h5>2023.10.06 ~ 2023.10.31</h5>
+                <h5>10월 청수당 이벤트</h5>
+            </div><!-- col-6 -->
+            <div class="col-12 col-md-6 mt-2 ct-box">
+                <div class="img-box">
+                    <img src="img1/bsp9.jpg">
+                </div>
+                <h5>2023.10.05 ~ 2023.10.31</h5>
+                <h5>10월 청수당 BC카드 할인 이벤트</h5>
+            </div><!-- col-6 -->
+            <div class="col-12 col-md-6 mt-2 ct-box">
+                <div class="img-box">
+                    <img src="img1/bsp10.jpg">
+                </div>
+                <h5>2023.10.01 ~ 2023.10.31</h5>
+                <h5>10월 티머니 사이즈업, 가격동결</h5>
+            </div><!-- col-6 -->
+        </div><!-- row -->
+    </div><!-- container -->
+
+    <!-- 푸터 -->
+    <div class="container-fluid bg-light footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 ff">
+                    <div class="col-8 f1">
+                        <ul class="f-m mt-5">
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li class="l">|</li>
+                            <li><a href="#">이용약관</a></li>
+                            <li class="l">|</li>
+                            <li><a href="#">고객센터</a></li>
+                            <li class="l">|</li>
+                            <li><a href="#">CSR경영</a></li>
+                            <li class="l">|</li>
+                            <li><a href="#">사이트 맵</a></li>
+                        </ul>
+                        <p class="my-5">(주)이마트24</p>
+                        <p>대표이사: 김장욱 / 사업자등록번호: 105-86-92454</p>
+                        <p>서울특별시 성동구 성수동 2가 281-4 푸조비즈타워 / 고객센터: 02-6916-1500 / Fax: 02-6916-1430</p>
+                        <p>COPYRIGHT (C) EMART24.ALL RIGHT RESERVED</p>
+                    </div><!-- col-12 -->
+                    <div class="col-4 f2">
+                        <select name="sitelist" class="fs my-5">
+                            <option value="#">패밀리그룹</option>
+                            <option value="#">신세계그룹</option>
+                            <option value="#">신세계백화점</option>
+                            <option value="#">이마트</option>
+                            <option value="#">신세계인터내셔날</option>
+                            <option value="#">신세계푸드</option>
+                            <option value="#">신세계건설</option>
+                            <option value="#">신세계I&C</option>
+                            <option value="#">SCK컴퍼니</option>
+                            <option value="#">조선호텔앤리조트</option>
+                            <option value="#">신세계L&B</option>
+                            <option value="#">이마트에브리데이</option>
+                            <option value="#">신세계센트럴시티</option>
+                            <option value="#">신세계프라퍼티</option>
+                            <option value="#">신세계디에프</option>
+                            <option value="#">신세계라이브쇼핑</option>
+                            <option value="#">신세계까사</option>
+                            <option value="#">SSG.COM</option>
+                            <option value="#">시그나이트파트너스</option>
+                            <option value="#">신세계야구단</option>
+                            <option value="#">더블유컨셉코리아</option>
+                            <option value="#">지마켓</option>
+                        </select>
+                        <ul class="fm2">
+                            <li><button class="sns1"><img src="img1/sns1.png"></button></li>
+                            <li><button class="sns2"><img src="img1/sns2.png"></button></li>
+                            <li><button class="sns3"><img src="img1/sns3.png"></button></li>
+                            <li><button class="sns4"><img src="img1/sns4.png"></button></li>
+                        </ul>
+                    </div><!-- col-12 -->
+                </div><!-- col-12 -->
+            </div><!-- row -->
+        </div><!-- container -->
+    </div><!-- container-fluid -->
+    </div><!-- container-fluid -->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    </script>
+</body>
+
+</html>
