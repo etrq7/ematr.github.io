@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <title>Fresh Food</title>
+    <title>제휴 서비스</title>
     <link rel="icon" href="img/favicon.ico">
     <style>
         /* *::-webkit-scrollbar {
@@ -280,7 +280,7 @@
 
         .btn-room {
             width: 100%;
-            height: 52px;
+            height: 100px;
 
             display: flex;
             padding: 0;
@@ -304,74 +304,54 @@
             background-color: #f9bb00;
         }
 
-        #ct-box {
-            width: 100%;
-            height: 370px;
+        .btn-room .color-y {
+            background-color: #f9bb00;
+        }
 
-            border: 1px solid #ebebeb;
-            border-radius: 32px;
+        .color-gray {
+            width: 100%;
+            color: gray;
+            margin-bottom: 100px;
+        }
+
+        .ct-box {
+            width: 250px;
+            height: 150px;
+
+            border: 1px solid #ccc;
+            border-radius: 16px;
             position: relative;
-            margin-bottom: 20px;
+            margin-top: 20px;
         }
 
-        #ct-box img {
-            width: 200px;
-            height: 200px;
+        .ct-box img {
             position: absolute;
-            top: 50px;
+            top: 40%;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%);
         }
 
-        #ct-box .tit {
-            width: 35px;
-            height: 24px;
 
-            border-radius: 8px 8px 8px 0px;
-            background: #f95a00;
-
-            font-size: 11px;
-            font-weight: 500;
-            color: #fff;
-            padding: 5px;
-            text-align: center;
-
+        .ct-box p {
             position: absolute;
-            right: 15px;
-            top: 20px;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: gray;
         }
 
-        #ct-box .border {
-            display: block;
+        .w100p {
             width: 100%;
-            height: 0.5px;
-            border-top: 0.5px solid #ebebeb;
 
-            position: absolute;
-            bottom: 100px;
-            left: 0;
-        }
-
-        #ct-box a {
-            width: 200px;
-            height: 50px;
-            font-size: 17px;
-            font-weight: 400;
-            text-align: center;
-
-            position: absolute;
-            bottom: 45px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        #ct-box a span {
-            color: orangered;
-            font-weight: bold;
+            margin-top: 100px;
         }
 
         .dropdown-item.active, .dropdown-item:active {
              background-color: rgb(236, 189, 108);
+        }
+
+        .mb-100 {
+            margin-bottom: 100px;
         }
     </style>
 </head>
@@ -406,7 +386,7 @@
                               서비스
                             </a>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item" href="./living service.html">생활 서비스</a>
+                              <a class="dropdown-item" href="./living_service.html">생활 서비스</a>
                               <a class="dropdown-item" href="./affiliated_services.html">제휴 서비스</a>
                             </div>
                           </li>
@@ -457,197 +437,71 @@
         </div><!-- modal -->
     </div><!-- container-fluid -->
     <div class="container">
-        <div class="row">
-            <h1 class="mt-5 ct-h1">Fresh Food</h1>
-            <h4 class="mb-5 ct-h4">이마트24의 신선하고 다양한 Fresh Food를 소개합니다.</h4>
-            <div class="input-room">
-                <img src="img1/iconSearch.png">
-                <input type="text" Placeholder="상품명을 입력해주세요.">
-                <button>검색</button>
-            </div><!-- input-room -->
-            <ul class="btn-room">
-                <li>
-                    <div class="col-2"><button>전체</button></div>
-                </li>
-                <li>
-                    <div class="col-2"><button>도시락</button></div>
-                </li>
-                <li>
-                    <div class="col-2"><button>김밥</button></div>
-                </li>
-                <li>
-                    <div class="col-2"><button>주먹밥</button></div>
-                </li>
-                <li>
-                    <div class="col-2"><button>햄버거</button></div>
-                </li>
-                <li>
-                    <div class="col-2"><button>샌드위치</button></div>
-                </li>
-                <li>
-                    <div class="col-2"><button>즉석식</button></div>
-                </li>
+        <div class="row mb-100">
+            <h1 class="mt-5 ct-h1">제휴 서비스</h1>
+            <ul class="btn-room row">
+                <li><div class="col-2"><button class="color-y">제휴 페이</button></div></li>
+                <li><div class="col-2"><button>제휴 멤버십</button></div></li>
             </ul><!-- btn-room -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt1.jpg">
-                    <span class="border"></span>
-                    <a>스테이크에그디럭스버거<br>
-                        <span>3,500 원</span></a>
+
+            <h2 class="mt-5 ct-h1">제휴 페이</h2>
+            <p class="color-gray">이마트24와 함께 하는 제휴 페이 혜택을 받아보세요.</p>
+
+            <div class="col-6 col-lg-3">
+                <div class="ct-box">
+                    <img src="img/as1.png">
+                    <p>스마일 페이</p>
                 </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt2.jpg">
-                    <span class="border"></span>
-                    <a>버터갈릭스크램블샌드위치<br>
-                        <span>2,800 원</span></a>
+            </div><!-- col-6 col-lg-3 -->
+            <div class="col-6 col-lg-3">
+                <div class="ct-box">
+                    <img src="img/as2.png">
+                    <p>SSG PAY</p>
                 </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt3.jpg">
-                    <span class="border"></span>
-                    <a>뉴빅케이준치킨햄샌드위치<br>
-                        <span>2,800 원</span></a>
+            </div><!-- col-6 col-lg-3 -->
+            <div class="col-6 col-lg-3">
+                <div class="ct-box">
+                    <img src="img/as3.png">
+                    <p>위젯페이</p>
                 </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt4.jpg">
-                    <span class="border"></span>
-                    <a>프리미엄햄에그샌드<br>
-                        <span>2,500 원</span></a>
+            </div><!-- col-6 col-lg-3 -->
+            <div class="col-6 col-lg-3">
+                <div class="ct-box">
+                    <img src="img/as4.png">
+                    <p>제로페이</p>
                 </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt5.jpg">
-                    <span class="border"></span>
-                    <a>상하이스파이시버거<br>
-                        <span>2,500 원</span></a>
+            </div><!-- col-6 col-lg-3 -->
+            <div class="col-6 col-lg-3">
+                <div class="ct-box">
+                    <img src="img/as5.png">
+                    <p>카카오페이</p>
                 </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt6.jpg">
-                    <span class="border"></span>
-                    <a>햄포테이토샐러드샌드위치<br>
-                        <span>2,800 원</span></a>
+            </div><!-- col-6 col-lg-3 -->
+            <div class="col-6 col-lg-3">
+                <div class="ct-box">
+                    <img src="img/as6.png">
+                    <p>페이코</p>
                 </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt7.jpg">
-                    <span class="border"></span>
-                    <a>빅더블치즈버거<br>
-                        <span>3,500 원</span></a>
+            </div><!-- col-6 col-lg-3 -->
+            <div class="col-6 col-lg-3">
+                <div class="ct-box">
+                    <img src="img/as7.png">
+                    <p>페이코인</p>
                 </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt8.jpg">
-                    <span class="border"></span>
-                    <a>빅불고기버거<br>
-                        <span>3,500 원</span></a>
+            </div><!-- col-6 col-lg-3 -->
+            <div class="col-6 col-lg-3">
+                <div class="ct-box">
+                    <img src="img/as8.png">
+                    <p>Alipay</p>
                 </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt9.jpg">
-                    <span class="border"></span>
-                    <a>햄치즈머핀<br>
-                        <span>2,300 원</span></a>
+            </div><!-- col-6 col-lg-3 -->
+            <div class="col-6 col-lg-3">
+                <div class="ct-box">
+                    <img src="img/as9.png">
+                    <p>NAVER pay</p>
                 </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt10.jpg">
-                    <span class="border"></span>
-                    <a>대만식블루베리&햄치즈샌드위치<br>
-                        <span>3,000 원</span></a>
-                </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt11.jpg">
-                    <span class="border"></span>
-                    <a>지금인기인가요샌드위치<br>
-                        <span>2,700 원</span></a>
-                </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt12.jpg">
-                    <span class="border"></span>
-                    <a>빅더블불고기바베큐맛버거<br>
-                        <span>3,500 원</span></a>
-                </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt13.jpg">
-                    <span class="border"></span>
-                    <a>B.E.L.T샌드위치<br>
-                        <span>3,000 원</span></a>
-                </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt14.jpg">
-                    <span class="border"></span>
-                    <a>더클리프_클럽버거<br>
-                        <span>4,200 원</span></a>
-                </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt15.jpg">
-                    <span class="border"></span>
-                    <a>와사비슈림프버거<br>
-                        <span>3,500 원</span></a>
-                </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt16.jpg">
-                    <span class="border"></span>
-                    <a>올리브에그샌드위치<br>
-                        <span>3,000 원</span></a>
-                </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt17.jpg">
-                    <span class="border"></span>
-                    <a>뉴베이컨에그샌드위치<br>
-                        <span>2,400 원</span></a>
-                </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt18.jpg">
-                    <span class="border"></span>
-                    <a>빅통살치킨버거<br>
-                        <span>2,900 원</span></a>
-                </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt19.jpg">
-                    <span class="border"></span>
-                    <a>촉촉에그몰랑샌드위치<br>
-                        <span>2,600 원</span></a>
-                </div>
-            </div><!-- ct-box -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <div id="ct-box">
-                    <img src="img/ctt20.jpg">
-                    <span class="border"></span>
-                    <a>치즈불고기버거<br>
-                        <span>2,800 원</span></a>
-                </div>
-            </div><!-- ct-box -->
+            </div><!-- col-6 col-lg-3 -->
+
         </div><!-- row -->
     </div><!-- container -->
 
