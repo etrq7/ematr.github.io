@@ -11,10 +11,16 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
     <title>행사상품</title>
+    <link rel="icon" href="img/favicon.ico">
     <style>
         /* *::-webkit-scrollbar {
       display: none;
     } */
+
+        ::selection {
+            color: #fff;
+            background-color: rgb(236, 189, 108);
+        }
 
         #logo {
             height: 20px;
@@ -448,13 +454,25 @@
                 <input type="text" Placeholder="상품명을 입력해주세요.">
                 <button>검색</button>
             </div><!-- input-room -->
-            <ul class="btn-room">
-                <li><button>전체</button></li>
-                <li><button>1+1</button></li>
-                <li><button>2+1</button></li>
-                <li><button>3+1</button></li>
-                <li><button>세일</button></li>
-                <li><button>덤증정</button></li>
+            <ul class="btn-room row">
+                <li>
+                    <div class="col-2"><button>전체</button></div>
+                </li>
+                <li>
+                    <div class="col-2"><button>1+1</button></div>
+                </li>
+                <li>
+                    <div class="col-2"><button>2+1</button></div>
+                </li>
+                <li>
+                    <div class="col-2"><button>3+1</button></div>
+                </li>
+                <li>
+                    <div class="col-2"><button>세일</button></div>
+                </li>
+                <li>
+                    <div class="col-2"><button>덤증정</button></div>
+                </li>
             </ul><!-- btn-room -->
             <div class="col-6 col-md-4 col-lg-3">
                 <div id="ct-box">

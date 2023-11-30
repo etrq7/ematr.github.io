@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <title>종료된 이벤트</title>
+    <title>생활 서비스</title>
     <link rel="icon" href="img/favicon.ico">
     <style>
         /* *::-webkit-scrollbar {
@@ -189,6 +189,8 @@
         }
 
 
+
+
         @media (max-width: 768px) {
             .footer {
                 margin-top: 100px;
@@ -200,6 +202,18 @@
 
             .l {
                 display: none;
+            }
+
+            .btn-room li {
+                width: 60px;
+                height: 40px;
+
+                margin-right: 15px;
+            }
+
+            .btn-room li button {
+                width: 65px;
+                height: 40px;
             }
         }
 
@@ -216,39 +230,126 @@
             width: 100%;
         }
 
-        .col-6 img {
-            width: 500p-boxx;
-            height: 250px;
+        .input-room {
+            width: 860px;
+            height: 54px;
+            margin: 0 auto;
 
-            border-radius: 20px;
+            display: flex;
+            background-color: #fff;
+            margin-bottom: 100px;
         }
 
-        .mt-2 {
-            margin: 20px 0;
+        .input-room img {
+            width: 54px;
+            height: 54px;
+            background-color: #fff;
+        }
+
+        .input-room input {
+            background-color: rgba(255, 0, 0, 0);
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            border: none;
+            padding-left: 16px;
+            padding-right: 16px;
+            width: 100%;
+            color: #333333;
+            font-size: 15px;
+            font-weight: 500;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .input-room button {
+            width: 160px;
+            height: 58px;
+            border-radius: 8px;
+            background-color: #f9bb00;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 16px;
+            padding-right: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+
+            margin-left: 100px;
+        }
+
+        .btn-room {
+            width: 100%;
+            height: 100px;
+
+            display: flex;
+            padding: 0;
+            margin-bottom: 50px;
+        }
+
+        .btn-room button {
+            width: 120px;
+            height: 52px;
+
+            background-color: #fff;
+            border: 1px solid #ebebeb;
+            border-radius: 18px 18px 10px 18px;
+
+            margin-right: 20px;
+            margin-top: 10px;
+            margin-right: 15px;
+        }
+
+        .btn-room button:hover {
+            background-color: #f9bb00;
+        }
+
+        .btn-room .color-y {
+            background-color: #f9bb00;
+        }
+
+        .color-gray {
+            color: gray;
+        }
+
+        .ct-box {
+            width: 330px;
+            height: 360px;
+
+            border: 1px solid #ccc;
+            border-radius: 32px;
+            position: relative;
+            margin-top: 20px;
         }
 
         .ct-box img {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ct-box hr {
             width: 100%;
-            height: 100%;
-            filter: grayscale(100%);
-            -webkit-transform: scale(1);
-            transform: scale(1);
-            -webkit-transition: .3s;
-            transition: .3s
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
-        .ct-box:hover img {
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+        .ct-box h3 {
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.7em;
+            font: bold;
         }
 
-        .ct-box:hover {
-            color: rgb(231, 188, 113);
-        }
+        .w100p {
+            width: 100%;
 
-        .img-box {
-            border-radius: 20px;
-            overflow: hidden;
+            margin-top: 100px;
         }
     </style>
 </head>
@@ -328,80 +429,77 @@
     </div><!-- container-fluid -->
     <div class="container">
         <div class="row">
-            <h1 class="mt-5 ct-h1">종료된 이벤트</h1>
-            <h4 class="mb-5 ct-h4">종료된 이벤트 입니다. 당첨자 발표는 이마트24 앱에서 확인해 주세요.</h4>
-            <div class="col-12 col-md-6 mt-2 ct-box">
-                <div class="img-box">
-                    <img src="img1/bsp1.jpg">
+            <h1 class="mt-5 ct-h1">행사상품</h1>
+            <h4 class="mb-5 ct-h4">이마트24가 준비한 이달의 행사상품을 만나보세요.</h4>
+            <ul class="btn-room row">
+                <li><div class="col-2"><button class="color-y">알뜰폰유심</button></div></li>
+                <li><div class="col-2"><button>택배</button></div></li>
+                <li><div class="col-2"><button>기프트카드</button></div></li>
+                <li><div class="col-2"><button>교통카드</button></div></li>
+                <li><div class="col-2"><button>편의점캐시</button></div></li>
+                <li><div class="col-2"><button>POS현금인출</button></div></li>
+                <li><div class="col-2"><button>타이어랜탈</button></div></li>
+                <li><div class="col-2"><button>반려동물등록</button></div></li>
+                <li><div class="col-2"><button>포토굿즈</button></div></li>
+            </ul><!-- btn-room -->
+
+            <h2 class="mt-5 ct-h1">알뜰폰 유심</h2>
+            <p>통화·데이터 사용량에 따라 가성비 요금제를 사용할 수 있는 알뜰폰 유심칩을 이마트24 전국 매장에서 구입 가능합니다.</p>
+            <p class="color-gray">* 매장에서 유심 구매 후 유심에 동봉된 안내문에 따라 가입하시거나 구입하신 통신사별 가입버튼을 누르시면 됩니다.</p>
+
+            <div class="col-6 col-lg-4">
+                <div class="ct-box">
+                    <img src="img/ls1.png">
+                    <hr>
+                    <h3>KT다이렉트</h3>
                 </div>
-                <h5>2023.11.15 ~ 2023.11.17</h5>
-                <h5>11월 쓱데이 7찬 도시락 이벤트</h5>
-            </div><!-- col-6 -->
-            <div class="col-12 col-md-6 mt-2 ct-box">
-                <div class="img-box">
-                    <img src="img1/bsp2.jpg">
+            </div><!-- col-6 col-lg-4 -->
+            <div class="col-6 col-lg-4">
+                <div class="ct-box">
+                    <img src="img/ls2.png">
+                    <hr>
+                    <h3>유플러스</h3>
                 </div>
-                <h5>2023.11.01 ~ 2023.11.11</h5>
-                <h5>11월 티머니페이 빼빼로 이벤트</h5>
-            </div><!-- col-6 -->
-            <div class="col-12 col-md-6 mt-2 ct-box">
-                <div class="img-box">
-                    <img src="img1/bsp3.jpg">
+            </div><!-- col-6 col-lg-4 -->
+            <div class="col-6 col-lg-4">
+                <div class="ct-box">
+                    <img src="img/ls3.png">
+                    <hr>
+                    <h3>KTM모바일</h3>
                 </div>
-                <h5>2023.11.01 ~ 2023.11.11</h5>
-                <h5>11월 춘식이 빼빼로 이벤트</h5>
-            </div><!-- col-6 -->
-            <div class="col-12 col-md-6 mt-2 ct-box">
-                <div class="img-box">
-                    <img src="img1/bsp4.jpg">
+            </div><!-- col-6 col-lg-4 -->
+            <div class="col-6 col-lg-4">
+                <div class="ct-box">
+                    <img src="img/ls4.png">
+                    <hr>
+                    <h3>SK텔링크</h3>
                 </div>
-                <h5>2023.11.01 ~ 2023.11.11</h5>
-                <h5>11월 롯데제과 빼빼로대전 이벤트</h5>
-            </div><!-- col-6 -->
-            <div class="col-12 col-md-6 mt-2 ct-box">
-                <div class="img-box">
-                    <img src="img1/bsp5.jpg">
+            </div><!-- col-6 col-lg-4 -->
+            <div class="col-6 col-lg-4">
+                <div class="ct-box">
+                    <img src="img/ls5.png">
+                    <hr>
+                    <h3>미디어로그</h3>
                 </div>
-                <h5>2023.11.01 ~ 2023.11.12</h5>
-                <h5>11월 빼빼로데이 틀린그림찾기</h5>
-            </div><!-- col-6 -->
-            <div class="col-12 col-md-6 mt-2 ct-box">
-                <div class="img-box">
-                    <img src="img1/bsp6.jpg">
+            </div><!-- col-6 col-lg-4 -->
+            <div class="col-6 col-lg-4">
+                <div class="ct-box">
+                    <img src="img/ls6.png">
+                    <hr>
+                    <h3>스카이라이프</h3>
                 </div>
-                <h5>2023.10.18 ~ 2023.10.31</h5>
-                <h5>10월 롯데웰푸드 쿠폰 이벤트</h5>
-            </div><!-- col-6 -->
-            <div class="col-12 col-md-6 mt-2 ct-box">
-                <div class="img-box">
-                    <img src="img1/bsp7.jpg">
-                </div>
-                <h5>2023.10.16 ~ 2023.10.31</h5>
-                <h5>10월 돈사골새우라면 가입이벤트</h5>
-            </div><!-- col-6 -->
-            <div class="col-12 col-md-6 mt-2 ct-box">
-                <div class="img-box">
-                    <img src="img1/bsp8.jpg">
-                </div>
-                <h5>2023.10.06 ~ 2023.10.31</h5>
-                <h5>10월 청수당 이벤트</h5>
-            </div><!-- col-6 -->
-            <div class="col-12 col-md-6 mt-2 ct-box">
-                <div class="img-box">
-                    <img src="img1/bsp9.jpg">
-                </div>
-                <h5>2023.10.05 ~ 2023.10.31</h5>
-                <h5>10월 청수당 BC카드 할인 이벤트</h5>
-            </div><!-- col-6 -->
-            <div class="col-12 col-md-6 mt-2 ct-box">
-                <div class="img-box">
-                    <img src="img1/bsp10.jpg">
-                </div>
-                <h5>2023.10.01 ~ 2023.10.31</h5>
-                <h5>10월 티머니 사이즈업, 가격동결</h5>
-            </div><!-- col-6 -->
+            </div><!-- col-6 col-lg-4 -->
         </div><!-- row -->
     </div><!-- container -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <img src="img/ls7.png" class="w100p">
+            </div><!-- col-12 -->
+        </div><!-- row -->
+    </div><!-- container-fluid -->
+
 
     <!-- 푸터 -->
     <div class="container-fluid bg-light footer">

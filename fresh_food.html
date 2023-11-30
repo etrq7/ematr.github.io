@@ -11,10 +11,16 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
     <title>Fresh Food</title>
+    <link rel="icon" href="img/favicon.ico">
     <style>
         /* *::-webkit-scrollbar {
       display: none;
     } */
+
+        ::selection {
+            color: #fff;
+            background-color: rgb(236, 189, 108);
+        }
 
         #logo {
             height: 20px;
@@ -282,7 +288,7 @@
         }
 
         .btn-room button {
-            width: 84px;
+            width: 120px;
             height: 52px;
 
             background-color: #fff;
@@ -449,13 +455,27 @@
                 <button>검색</button>
             </div><!-- input-room -->
             <ul class="btn-room">
-                <li><button>전체</button></li>
-                <li><button>도시락</button></li>
-                <li><button>김밥</button></li>
-                <li><button>주먹밥</button></li>
-                <li><button>햄버거</button></li>
-                <li><button>샌드위치</button></li>
-                <li><button>즉석식</button></li>
+                <li>
+                    <div class="col-2"><button>전체</button></div>
+                </li>
+                <li>
+                    <div class="col-2"><button>도시락</button></div>
+                </li>
+                <li>
+                    <div class="col-2"><button>김밥</button></div>
+                </li>
+                <li>
+                    <div class="col-2"><button>주먹밥</button></div>
+                </li>
+                <li>
+                    <div class="col-2"><button>햄버거</button></div>
+                </li>
+                <li>
+                    <div class="col-2"><button>샌드위치</button></div>
+                </li>
+                <li>
+                    <div class="col-2"><button>즉석식</button></div>
+                </li>
             </ul><!-- btn-room -->
             <div class="col-6 col-md-4 col-lg-3">
                 <div id="ct-box">
