@@ -337,19 +337,30 @@
       color: rgb(236, 189, 108);
     }
 
-    .dropdown-item.active, .dropdown-item:active {
+    .dropdown-item.active,
+    .dropdown-item:active {
       background-color: rgb(236, 189, 108);
     }
 
-    
-		#player{
-			position: absolute;
-			/* display: none */
-		}
 
-    .playbtn, .stopbtn {
+    #player {
+      position: absolute;
+      /* display: none */
+    }
+
+    .playbtn,
+    .stopbtn {
       /* border-radius: 10px; */
       margin-bottom: 10px;
+    }
+
+    .btn-link {
+      color: black;
+    }
+
+    .btn-link:hover {
+      color: black;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -654,11 +665,75 @@
         <button class="playbtn btn btn-warning">동영상 키기</button>
         <button class="stopbtn btn btn-warning">동영상 끄기</button>
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe id="player" src="https://www.youtube.com/embed/bw96hdexiPM?autoplay=0&mute=1&loop=1&playlist=bw96hdexiPM&enablejsapi=1" 
-          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen></iframe>
+          <iframe id="player"
+            src="https://www.youtube.com/embed/bw96hdexiPM?autoplay=0&mute=1&loop=1&playlist=bw96hdexiPM&enablejsapi=1"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
         </div><!-- embed-responsive -->
       </div><!-- col-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+
+
+  <h2 class="tac my-5" id="jkl5">FAQ</h2>
+  <div class="container my-5">
+    <div class="row">
+      <div class="col">
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                  data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Q. 카드 프로모션의 경우 카드별 프로모션 적용이 가능한가요?
+                </button>
+              </h2>
+            </div>
+  
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                A. 네. 각각 카드사별 프로모션 적용 가능합니다. <br>
+                같은 카드사별 2번은 적용이 불가합니다. <br>
+                <br>
+                > 예: 행사별 행사 대상 카드가 2개인 경우 (예를 들어 현대 / 우리카드인경우) <br>
+                행사 카드별로 행사대상금액 이상 결제 시 행사 혜택 제공 가능 <br>
+                행사별 행사 적용 대상 카드별 현대카드로 1번 + 우리카드로 1번 참여 가능
+              </div>
+            </div>
+          </div><!-- card -->
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Q. 카드 프로모션 결제 시 다른 결제수단이랑 같이 결제해도 적용 가능한가요?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                A. 불가합니다. 행사 대상카드로만 혜택 적용 가능한 금액이상을 전액결제한 경우에만 헤택 제공 됩니다.
+              </div>
+            </div>
+          </div><!-- card -->
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Q. 카드 프로모션 결제 시 다른 결제수단이랑 같이 결제해도 적용 가능한가요?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                A. 불가합니다. 행사 대상카드로만 혜택 적용 가능한 금액이상을 전액결제한 경우에만 헤택 제공 됩니다.
+              </div>
+            </div>
+          </div><!-- card -->
+        </div><!-- accordion -->
+      </div><!-- col -->
     </div><!-- row -->
   </div><!-- container -->
 
@@ -736,19 +811,19 @@
     });
     $('body').scrollspy({ target: '#navbar-example2', offset: 100 })
 
-    
-		$(function() {
+
+    $(function () {
       let playbtn = $(".playbtn")
       let stopbtn = $(".stopbtn")
 
-			playbtn.click(function() {
-				$("#player")[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
-			})
-			
-			stopbtn.click(function() {
-				$("#player")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
-			})
-		})
+      playbtn.click(function () {
+        $("#player")[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+      })
+
+      stopbtn.click(function () {
+        $("#player")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+      })
+    })
   </script>
 </body>
 
